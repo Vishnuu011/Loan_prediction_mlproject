@@ -1,12 +1,5 @@
-from loan_prediction.logger import logging
-from loan_prediction.exception import CustomException
-import sys
+from loan_prediction.pipline.training_pipeline import TrainPipeline
 
-logging.info("demo log")
+obj= TrainPipeline()
+obj.run_pipeline()
 
-try:
-        a=1/0
-
-except Exception as e:
-    logging.info("Division by Zero")
-    raise CustomException(e,sys)

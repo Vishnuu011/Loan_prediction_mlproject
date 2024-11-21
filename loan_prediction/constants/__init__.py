@@ -2,12 +2,15 @@ from datetime import datetime
 
 DATA_BASE_NAME="LOAN_DATA"
 COLLECTION_NAME="loan_data"
-CONNECTION_URL="MONGODB_URL"
+CONNECTION_URL="mongodb+srv://Vishnurrajeev:Vishnurrajeev@cluster0.hsmya.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 PIPELINE_NAME : str = "loanpredictionproject"
 ARTIFACT_DIR : str = "artifact"
 
 MODEL_NAME_FILE = "model.pkl"
+FILE_NAME = "loan_data.csv"
+TRAIN_FILE = "train.csv"
+TEST_FILE = "test.csv" 
 
 #DATAINGESTION RELATED CONSTANTS
 
