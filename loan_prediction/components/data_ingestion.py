@@ -27,7 +27,7 @@ class DataIngestion:
             logging.info(f"export data from mongodb")
 
             loan_data = LoanData()
-            dataframe = loan_data.export_collection_as_dataframe(self.data_ingetion_config.collection_name)
+            dataframe = loan_data.export_collection_as_dataframe(collection_name=self.data_ingetion_config.collection_name)
             
             logging.info(f"check data shape : {dataframe.shape}")
 
