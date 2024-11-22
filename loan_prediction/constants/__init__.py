@@ -1,4 +1,5 @@
 from datetime import datetime
+import os
 
 DATA_BASE_NAME="LOAN_DATA"
 COLLECTION_NAME="loan_data"
@@ -11,6 +12,7 @@ MODEL_NAME_FILE = "model.pkl"
 FILE_NAME = "loan_data.csv"
 TRAIN_FILE = "train.csv"
 TEST_FILE = "test.csv" 
+SCHEMA_FILE_PATH = os.path.join("config","schema.yaml")
 
 #DATAINGESTION RELATED CONSTANTS
 
