@@ -12,6 +12,8 @@ from loan_prediction.logger import logging
 from sklearn.model_selection import train_test_split
 import sys
 import os
+import warnings
+warnings.filterwarnings("ignore")
 
 class DataIngestion:
 

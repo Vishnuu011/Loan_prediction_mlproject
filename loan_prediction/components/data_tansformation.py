@@ -2,6 +2,8 @@ import os
 import sys
 import pandas as pd
 import numpy as np
+import warnings
+warnings.filterwarnings("ignore")
 
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder, PowerTransformer
 from sklearn.impute import SimpleImputer

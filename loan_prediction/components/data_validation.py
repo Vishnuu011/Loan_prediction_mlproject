@@ -2,6 +2,8 @@ import os
 import sys
 import pandas as pd
 import numpy as np
+import warnings
+warnings.filterwarnings("ignore")
 import json
 from evidently.model_profile import Profile
 from evidently.model_profile.sections import DataDriftProfileSection

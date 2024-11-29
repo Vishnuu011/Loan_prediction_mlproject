@@ -26,14 +26,11 @@ from loan_prediction.constants import *
 from loan_prediction.utils.utils import save_object, load_numpy_array
 
 
-class Trainer(BaseEstimator, ClassifierMixin):
-
-    
+class Trainer(BaseEstimator, ClassifierMixin):    
 
     def __init__(self, models : dict =None, params = None, 
                  X_train = None, y_train = None,
                  X_test = None, y_test = None):
-        
         try:
             self.models = models
             self.params = params
