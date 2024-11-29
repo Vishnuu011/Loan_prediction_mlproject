@@ -14,7 +14,7 @@ from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import StandardScaler
-from tqdm import tqdm_notebook
+from tqdm import tqdm
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -49,7 +49,7 @@ class Trainer(BaseEstimator, ClassifierMixin):
         try:
             report = {}
 
-            for i in tqdm_notebook(range(len(list(self.models)))):
+            for i in tqdm(range(len(list(self.models)))):
                 model = list(self.models.values())[i]
                 param = self.params[list(self.models.keys())[i]]
 
@@ -175,7 +175,7 @@ class ModelTrainer:
             
             train_arr = load_numpy_array(file_path=self.data_transformation_artifact.transformed_train_file_path)
             test_arr = load_numpy_array(file_path=self.data_transformation_artifact.transformed_test_file_path)
-            best_model  = self.get_model_object_and_report(train=train_arr, test=test_arr)
+            best_model  = self.get_model_object_and_report(train_array=train_arr, test_array=test_arr)
             best_model_score=0.9
             if best_model_score<0.8:
                 raise CustomException("No best model found")

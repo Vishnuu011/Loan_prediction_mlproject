@@ -23,4 +23,5 @@ uvicorn
 jinja2
 python-multipart
 Flask
+tqdm
 -e .
