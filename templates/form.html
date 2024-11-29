@@ -1,0 +1,99 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+
+    <div class="form-group">
+        <label for="person_age">person_age:</label>
+        <input type="text" id="person_age" name="person_age" placeholder="Enter person_age value (float)">
+    </div>
+
+    <div class="form-group">
+        <label for="person_gender">person_gender:</label>
+        <select id="person_gender" name="person_gender">
+          <option value="male">male</option>
+          <option value="female">female</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="person_education">person_education:</label>
+        <select id="person_education" name="person_education">
+          <option value="Bachelor">Bachelor</option>
+          <option value="Associate">Associate</option>
+          <option value="High School">High School</option>
+          <option value="Master">Master</option>
+          <option value="Doctorate">Doctorate</option>
+        </select>
+    </div>  
+  
+    <div class="form-group">
+        <label for="person_income">person_income:</label>
+        <input type="text" id="person_income" name="person_income" placeholder="Enter person_income value (float)">
+    </div>
+        
+  
+    <div class="form-group">
+        <label for="person_emp_exp">person_emp_exp:</label>
+        <input type="text" id="person_emp_exp" name="person_emp_exp" placeholder="Enter person_emp_exp value (int)">
+    </div>
+  
+<div class="form-group">
+  <label for="person_home_ownership">person_home_ownership:</label>
+  <select id="person_home_ownership" name="person_home_ownership">
+    <option value="RENT">RENT</option>
+    <option value="MORTGAGE">MORTGAGE</option>
+    <option value="OWN">OWN</option>
+    <option value="OTHER">OTHER</option>
+  </select>
+</div>
+
+<div class="form-group">
+    <label for="loan_amnt">loan_amnt:</label>
+    <input type="text" id="loan_amnt" name="loan_amnt" placeholder="Enter loan_amnt value (float)">
+</div>
+
+<div class="form-group">
+    <label for="loan_intent">loan_intent:</label>
+    <select id="loan_intent" name="loan_intent">
+      <option value="EDUCATION">EDUCATION</option>
+      <option value="MEDICAL">MEDICAL</option>
+      <option value="VENTURE">VENTURE</option>
+      <option value="PERSONAL">PERSONAL</option>
+      <option value="DEBTCONSOLIDATION">DEBTCONSOLIDATION</option>
+      <option value="HOMEIMPROVEMENT">HOMEIMPROVEMENT</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="loan_int_rate">loan_int_rate:</label>
+    <input type="text" id="loan_int_rate" name="loan_int_rate" placeholder="Enter loan_int_rate value (float)">
+</div>
+
+<div class="form-group">
+    <label for="loan_percent_income">loan_percent_income:</label>
+    <input type="text" id="loan_percent_income" name="loan_percent_income" placeholder="Enter loan_percent_income value (float)">
+</div>
+
+<div class="form-group">
+    <label for="cb_person_cred_hist_length">loan_percent_income:</label>
+    <input type="text" id="cb_person_cred_hist_length" name="cb_person_cred_hist_length" placeholder="Enter cb_person_cred_hist_length value (float)">
+</div>
+
+<div class="form-group">
+    <label for="credit_score">credit_score:</label>
+    <input type="text" id="credit_score" name="credit_score" placeholder="Enter credit_score value (int)">
+</div>
+
+<div class="form-group">
+    <label for="previous_loan_defaults_on_file">previous_loan_defaults_on_file:</label>
+    <select id="previous_loan_defaults_on_file" name="previous_loan_defaults_on_file">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+</div>
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

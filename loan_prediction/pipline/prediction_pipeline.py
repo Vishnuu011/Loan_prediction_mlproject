@@ -4,31 +4,29 @@ import sklearn
 import pandas as pd
 import numpy as np
 from loan_prediction.entity.artifact_entity import ModelTrainerArtifact, DataTransformationArtifact
+from loan_prediction.entity.config_entity import ModelTrainerConfig, DataTransformationConfig
 from loan_prediction.constants import *
 
 from loan_prediction.exception import CustomException
 from loan_prediction.logger import logging
 from loan_prediction.utils.utils import load_object
 
+
+
 class predictPipline:
 
-    def __init__(self, model_trainer_artifact : ModelTrainerArtifact, 
-                 tansformed_prosser_path : DataTransformationArtifact):
+    def __init__(self,):
 
-        try:
-            self.model_trainer_articat = model_trainer_artifact
-            self.transformed_prosser_path = tansformed_prosser_path
-        except Exception as e:
-            raise CustomException(e, sys)
+        self.model = ModelTrainerConfig()
+        self.datatransformation = DataTransformationConfig()
         
     def predict(self, feature):
 
         try:
-            model_path = self.model_trainer_articat.trained_model_file_path
-            preprosser_obj = self.transformed_prosser_path.transformed_obj_file_path
-            
+            model_path=os.path.join("artifacts","model.pkl")
+            preprocessor_path=os.path.join('artifacts','preprocesser.pkl')
             model = load_object(file_path=model_path)
-            preprosser = load_object(file_path=preprosser_obj)
+            preprosser = load_object(file_path=preprocessor_path)
 
             scaled_data = preprosser.transform(feature)
             preds = model.predict(scaled_data)
