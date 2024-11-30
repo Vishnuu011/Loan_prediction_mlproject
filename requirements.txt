@@ -25,5 +25,4 @@ python-multipart
 Flask
 tqdm
 gunicorn==20.1.0
-
 -e .

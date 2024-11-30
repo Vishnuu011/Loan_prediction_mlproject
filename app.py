@@ -36,8 +36,3 @@ def predict_datapoint():
 
         return render_template("result.html",final_result="rejected" if pred == 0 else "approved")
 
-
-
-if __name__=="__main__":
-    app.run(port=8080, debug=True)
-    
