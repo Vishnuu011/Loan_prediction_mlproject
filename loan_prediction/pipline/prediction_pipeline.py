@@ -3,9 +3,7 @@ import sys
 import sklearn
 import pandas as pd
 import numpy as np
-from loan_prediction.entity.artifact_entity import ModelTrainerArtifact, DataTransformationArtifact
-from loan_prediction.entity.config_entity import ModelTrainerConfig, DataTransformationConfig
-from loan_prediction.constants import *
+
 
 from loan_prediction.exception import CustomException
 
@@ -17,8 +15,7 @@ class predictPipline:
 
     def __init__(self,):
 
-        self.model = ModelTrainerConfig()
-        self.datatransformation = DataTransformationConfig()
+        pass
         
     def predict(self, feature):
 
