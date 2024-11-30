@@ -8,7 +8,7 @@ from loan_prediction.entity.config_entity import ModelTrainerConfig, DataTransfo
 from loan_prediction.constants import *
 
 from loan_prediction.exception import CustomException
-from loan_prediction.logger import logging
+
 from loan_prediction.utils.utils import load_object
 
 
