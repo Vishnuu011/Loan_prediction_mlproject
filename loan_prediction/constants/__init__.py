@@ -3,7 +3,7 @@ import os
 
 DATA_BASE_NAME="LOAN_DATA"
 COLLECTION_NAME="loan_data"
-CONNECTION_URL="mongodb+srv://Vishnurrajeev:Vishnurrajeev@cluster0.hsmya.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+CONNECTION_URL="mongodb+srv://Vishnurrajeev:<password>@cluster0.hsmya.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 PIPELINE_NAME : str = "loanpredictionproject"
 ARTIFACT_DIR : str = "artifact"
